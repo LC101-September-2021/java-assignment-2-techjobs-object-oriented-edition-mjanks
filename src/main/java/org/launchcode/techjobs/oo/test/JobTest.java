@@ -18,10 +18,10 @@ public class JobTest {
             new PositionType("Quality control"), new CoreCompetency("Persistence"));
     Job j4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
             new PositionType("Quality control"), new CoreCompetency("Persistence"));
-    Job j5 = new Job("Product tester", new Employer(), new Location(),
-            new PositionType(), new CoreCompetency());
-    Job j6 = new Job("", new Employer(), new Location(),
-            new PositionType(), new CoreCompetency());
+    Job j5 = new Job("Product tester", new Employer(""), new Location(""),
+            new PositionType(""), new CoreCompetency(""));
+    Job j6 = new Job("", new Employer(""), new Location(""),
+            new PositionType(""), new CoreCompetency(""));
 
     @Test
     public void testSettingJobId() {
