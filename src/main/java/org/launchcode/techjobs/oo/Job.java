@@ -14,7 +14,8 @@ public class Job {
     private CoreCompetency coreCompetency;
 
     public Job() {
-        id =+ nextId;
+        id = nextId;
+        nextId++;
     }
 
     public Job(String aName, Employer emp, Location loc, PositionType pt, CoreCompetency cc) {
