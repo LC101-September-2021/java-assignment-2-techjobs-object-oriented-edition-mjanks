@@ -59,14 +59,14 @@ public class JobTest {
     public void testJobClassToStringFieldLabels() {
         assertEquals(j3.toString(), "\nID: " + j3.getId() + "\nName: " + j3.getName() + "\nEmployer: " +
                 j3.getEmployer() + "\nLocation: " + j3.getLocation() + "\nPosition Type: " + j3.getPositionType() +
-                "\nCore Competency: " + j3.getCoreCompetency() + "\n\n");
+                "\nCore Competency: " + j3.getCoreCompetency() + "\n");
     }
 
     @Test
     public void testJobClassToStringEmptyFields() {
         assertEquals(j5.toString(), "\nID: " + j5.getId() + "\nName: " + j5.getName() + "\nEmployer: " +
                 "Data not available" + "\nLocation: " + "Data not available" + "\nPosition Type: " +
-                "Data not available" + "\nCore Competency: " + "Data not available" + "\n\n");
+                "Data not available" + "\nCore Competency: " + "Data not available" + "\n");
     }
 
     @Test

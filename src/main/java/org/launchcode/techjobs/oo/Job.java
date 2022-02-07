@@ -76,7 +76,7 @@ public class Job {
             return "\nOOPS! This job does not seem to exist.\n";
         else
             return "\nID: " + id + "\nName: " + name + "\nEmployer: " + employer + "\nLocation: " + location +
-                    "\nPosition Type: " + positionType + "\nCore Competency: " + coreCompetency + "\n\n";
+                    "\nPosition Type: " + positionType + "\nCore Competency: " + coreCompetency + "\n";
     }
 
     // Getters and Setters:
