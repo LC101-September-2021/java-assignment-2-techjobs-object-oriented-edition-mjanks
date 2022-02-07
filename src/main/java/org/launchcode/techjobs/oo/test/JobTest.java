@@ -12,8 +12,6 @@ import static org.junit.Assert.*;
  */
 @RunWith(JUnit4.class)
 public class JobTest {
-    Job j1 = new Job();
-    Job j2 = new Job();
     Job j3 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
             new PositionType("Quality control"), new CoreCompetency("Persistence"));
     Job j4 = new Job("Product tester", new Employer("ACME"), new Location("Desert"),
@@ -25,6 +23,8 @@ public class JobTest {
 
     @Test
     public void testSettingJobId() {
+        Job j1 = new Job();
+        Job j2 = new Job();
         assertEquals(j1.getId(), j2.getId() - 1);
         assertFalse(j1.getId() == j2.getId());
     }
