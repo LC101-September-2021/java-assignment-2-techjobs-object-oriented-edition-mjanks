@@ -7,7 +7,7 @@ public class Job {
     private int id;
     private static int nextId = 1;
 
-    private String name;
+    private String name = "";
     private Employer employer;
     private Location location;
     private PositionType positionType;
@@ -40,6 +40,43 @@ public class Job {
     @Override
     public int hashCode() {
         return Objects.hash(getId());
+    }
+
+    @Override
+    public String toString() {
+        boolean nameDataNotAvailable = false;
+        boolean employerDataNotAvailable = false;
+        boolean locationDataNotAvailable = false;
+        boolean positionTypeDataNotAvailable = false;
+        boolean coreCompetencyDataNotAvailable = false;
+
+        if(getName().equals("")) {
+            setName("Data not available");
+            nameDataNotAvailable = true;
+        }
+        if(getEmployer().getValue().equals("")) {
+            employer.setValue("Data not available");
+            employerDataNotAvailable = true;
+        }
+        if(getLocation().getValue().equals("")) {
+            location.setValue("Data not available");
+            locationDataNotAvailable = true;
+        }
+        if(getPositionType().getValue().equals("")) {
+            positionType.setValue("Data not available");
+            positionTypeDataNotAvailable = true;
+        }
+        if(getCoreCompetency().getValue().equals("")) {
+            coreCompetency.setValue("Data not available");
+            coreCompetencyDataNotAvailable = true;
+        }
+
+        if(nameDataNotAvailable && employerDataNotAvailable && locationDataNotAvailable &&
+                positionTypeDataNotAvailable && coreCompetencyDataNotAvailable)
+            return "\nOOPS! This job does not seem to exist.\n";
+        else
+            return "\nID: " + id + "\nName: " + name + "\nEmployer: " + employer + "\nLocation: " + location +
+                    "\nPosition Type: " + positionType + "\nCore Competency: " + coreCompetency + "\n\n";
     }
 
     // Getters and Setters:
