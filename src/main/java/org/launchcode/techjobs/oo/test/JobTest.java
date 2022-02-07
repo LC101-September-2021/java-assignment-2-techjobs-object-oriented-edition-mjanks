@@ -56,7 +56,7 @@ public class JobTest {
     }
 
     @Test
-    public void testJobClassToStringFieldLabels() {
+    public void testToStringContainsCorrectLabelsAndDataMethod() {
         assertEquals(j3.toString(), "\nID: " + j3.getId() + "\nName: " + j3.getName() + "\nEmployer: " +
                 j3.getEmployer() + "\nLocation: " + j3.getLocation() + "\nPosition Type: " + j3.getPositionType() +
                 "\nCore Competency: " + j3.getCoreCompetency() + "\n");
