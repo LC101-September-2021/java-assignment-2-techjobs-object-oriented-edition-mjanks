@@ -63,7 +63,7 @@ public class JobTest {
     }
 
     @Test
-    public void testJobClassToStringEmptyFields() {
+    public void testToStringHandlesEmptyField() {
         assertEquals(j5.toString(), "\nID: " + j5.getId() + "\nName: " + j5.getName() + "\nEmployer: " +
                 "Data not available" + "\nLocation: " + "Data not available" + "\nPosition Type: " +
                 "Data not available" + "\nCore Competency: " + "Data not available" + "\n");
