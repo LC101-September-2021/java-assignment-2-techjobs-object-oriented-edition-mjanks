@@ -50,7 +50,7 @@ public class JobTest {
     }
 
     @Test
-    public void testJobClassToStringReturnsStringBeginningAndEndingWithBlankLine() {
+    public void testToStringStartsAndEndsWithNewLine() {
         assertEquals(j3.toString().charAt(0), '\n');
         assertEquals(j3.toString().charAt(j3.toString().length() - 1), '\n');
     }
